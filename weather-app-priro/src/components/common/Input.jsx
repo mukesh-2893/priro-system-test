@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+// common component
 import Button from "./Button";
 
 const Input = ({
@@ -9,10 +11,13 @@ const Input = ({
   onClick,
 }) => {
   const [data, setData] = useState();
+
+  // buttton click
   const buttonClick = () => {
     onClick(data);
   };
 
+  // on press enter
   const keyPressHandler = (e) => {
     if (e.key === "Enter") onClick(data);
   };
@@ -21,6 +26,7 @@ const Input = ({
       <div className="flex items-center justify-center">
         <div className="relative">
           <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            {/* search icon */}
             <svg
               className="w-4 h-4 text-gray-500 dark:text-gray-400"
               aria-hidden="true"
@@ -46,6 +52,7 @@ const Input = ({
             onKeyPress={(e) => keyPressHandler(e)}
             required
           />
+          {/* common component */}
           <Button clickHandler={(e) => buttonClick(e)} />
         </div>
       </div>

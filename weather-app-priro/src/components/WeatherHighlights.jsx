@@ -1,10 +1,12 @@
 import React from "react";
 
 const WeatherHighlights = ({ weatherData }) => {
+  // check data available or not
   if (!weatherData || !weatherData.main || !weatherData.visibility) {
     return null; // Render nothing if data is not available yet
   }
 
+  // parsing data
   const humidity = weatherData.main.humidity;
   const visibility = weatherData.visibility;
   const windSpeed = weatherData.wind.speed;

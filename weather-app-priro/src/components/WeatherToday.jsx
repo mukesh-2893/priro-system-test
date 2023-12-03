@@ -11,6 +11,7 @@ function WeatherToday({ weatherData }) {
     return null;
   }
 
+  // parsing data
   const temperature = Math.round(weatherData.main.temp - 273.15);
   const feelsLike = Math.round(weatherData.main.feels_like - 273.15);
   const description = weatherData.weather[0].description;
