@@ -16,8 +16,10 @@ const WeatherHighlights = ({ weatherData }) => {
 
   return (
     <div className="bg-white rounded-lg shadow-md p-8 m-4">
-      <h2 className="text-3xl font-bold mb-4">Today's Highlights</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <h2 className="text-2xl font-bold mb-4 md:text-2xl">
+        Today's Highlights
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 sm:px-11">
         <div className="flex">
           <h3 className="text-lg font-semibold mb-2">Sunrise : </h3>
           <p className="text-lg ml-2">{sunrise}</p>
@@ -32,7 +34,7 @@ const WeatherHighlights = ({ weatherData }) => {
         </div>
         <div className="flex">
           <h3 className="text-lg font-semibold mb-2">Wind Speed :</h3>
-          <p className="text-lg ml-2">{windSpeed} km/h</p>
+          <p className="text-lg ml-2 sm:ml-0">{windSpeed} km/h</p>
         </div>
         <div className="flex">
           <h3 className="text-lg font-semibold mb-2">Visibility :</h3>

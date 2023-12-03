@@ -37,22 +37,39 @@ function WeatherToday({ weatherData }) {
   ) : null;
 
   return (
-    <div className="flex items-center bg-white rounded-lg shadow-md p-8 m-4">
+    <div className="flex items-center bg-white rounded-lg shadow-md px-8 py-14 m-4 sm:flex-col md:px-[64px] sm:px-[54px]">
       {weatherIcon}
-      <div>
-        <h2 className="text-2xl font-bold mb-2">
-          {" "}
+      <div className="">
+        {/* <p className="text-2xl font-bold mb-4 ml-0">
           Temperature : {temperature}°C
-        </h2>
-        <p className="text-lg">Feels Like: {feelsLike}°C</p>
-        <p className="text-lg">Description: {description}</p>
-        <hr className="border-gray-300 my-4" />
-        <div className="text-lg space-y-4">
-          <p>Date: {date}</p>
-          <p>Time: {time}</p>
-          <p>
-            Location: {location}, {country}
-          </p>
+        </p> */}
+        <div className="grid grid-cols-1 sm:grid-cols-1">
+          <div className="flex">
+            <h3 className="text-2xl font-bold mb-2">Temperature : </h3>
+            <p className="text-2xl font-bold ml-2">{temperature}°C</p>
+          </div>
+          <div className="flex">
+            <h3 className="text-lg font-semibold mb-2">Feels Like : </h3>
+            <p className="text-lg ml-2">{feelsLike}°C</p>
+          </div>
+          <div className="flex">
+            <h3 className="text-lg font-semibold mb-2">Description : </h3>
+            <p className="text-lg ml-2">{description}</p>
+          </div>
+          <div className="flex">
+            <h3 className="text-lg font-semibold mb-2">Date : </h3>
+            <p className="text-lg ml-2 sm:ml-0"> {date}</p>
+          </div>
+          <div className="flex">
+            <h3 className="text-lg font-semibold mb-2">Time : </h3>
+            <p className="text-lg ml-2">{time}</p>
+          </div>
+          <div className="flex">
+            <h3 className="text-lg font-semibold mb-2">Location : </h3>
+            <p className="text-lg ml-2">
+              {location}, {country}
+            </p>
+          </div>
         </div>
       </div>
     </div>

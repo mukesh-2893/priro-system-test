@@ -43,7 +43,7 @@ const Home = () => {
         />
       </div>
       {!isLoading ? (
-        <div className="flex bg-gray-200 items-center justify-center align-middle rounded-lg ">
+        <div className="flex bg-gray-200 items-center justify-center align-middle rounded-lg md:flex-col">
           {data && data.cod === "404" ? (
             <p className="p-8 text-3xl">{data.message}</p>
           ) : (
